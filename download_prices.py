@@ -17,7 +17,7 @@ def download_dayahead_prices():
         if year == datetime.now().year:
             end_date = datetime.now().strftime("%Y-%m-%dT000000")
         else:
-            end_date = f"{year}-12-31T234500"
+            end_date = f"{year+1}-01-01T000000"
         
         start_date = f"{year}-01-01T000000"
         csv_url = f"https://transparency.apg.at/api/v1/EXAAD1P/Download/de/PT15M/{start_date}/{end_date}"
